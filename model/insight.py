@@ -20,7 +20,8 @@ def insight():
             st.image("images/fooddelivery6.png")
         with row3:
             st.image("images/fooddelivery7.png")
-
+            
+    #EDA with POWERBI
     with st.expander("### 👥 EDA with PowerBI"):
 
         row1, row2, row3 = st.columns([2, 2, 1])
