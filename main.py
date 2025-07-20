@@ -50,6 +50,7 @@ if page == 'Data Understanding':
     st.markdown("<div style='text-align: justify;'>- Tipe kendaraan</div>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: justify;'>- Lama waktu persiapan makanan</div>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: justify;'>- Pengalaman kurir</div>", unsafe_allow_html=True)
+    st.markdown("---")
 
     with st.expander("📋 About Dataset"):
         st.write('## Dataset : Food_Delivery_Times.csv')
@@ -84,38 +85,6 @@ if page == 'Data Understanding':
             })
         st.subheader("📋 Informasi Struktur Datasets)")
         st.dataframe(info_df)
-
-    # Fungsi untuk visualisasi outlier
-    # def check_plot(df_cs, column):
-    #     plt.figure(figsize=(16, 4))
-
-    #     plt.subplot(1, 3, 1)
-    #     sns.histplot(df_cs[column], bins=30)
-    #     plt.title(f'Histogram - {column}')
-
-    #     plt.subplot(1, 3, 2)
-    #     stats.probplot(df_cs[column], dist="norm", plot=plt)
-    #     plt.ylabel('Variable quantiles')
-
-    #     plt.subplot(1, 3, 3)
-    #     sns.boxplot(y=df_cs[column])
-    #     plt.title(f'Boxplot - {column}')
-
-    #     st.pyplot(plt.gcf())
-    #     plt.clf()
-
-    # with st.expander("🧹 Data Pre Processing (Python with Google Colab)"):
-    #     # 1. Duplikat
-    #     st.subheader("✅ Pengecekan Duplikat")
-    #     st.markdown("<div style='text-align: justify;'>Tidak ditemukan duplikat.</div>", unsafe_allow_html=True)
-    #     pilih1 = st.radio("Tampilkan pengecekan?", ["Tidak", "Pengecekan"], key="cek_duplikat")
-    #     if pilih1 == "Pengecekan":
-    #         prop_unique = len(df.drop_duplicates()) / len(df)
-    #         st.write(f"Proporsi data unik: `{prop_unique:.4f}`")
-    #         if prop_unique < 1:
-    #             st.error("⚠️ Ditemukan duplikat dalam data.")
-    #         else:
-    #             st.success("✅ Tidak ditemukan duplikat dalam data.")
 
     with st.expander("📦 Data Preparation"):
 
@@ -173,150 +142,6 @@ if page == 'Data Understanding':
             plt.clf()
 
         check_plot(df_fd, selected_num_col)
-
-        # # 2. Tipe Data
-        # st.subheader("⚠️ Pengecekan Tipe Data")
-        # st.markdown("<div style='text-align: justify;'>Merubah format kolom “Invoice Date” ( Object → Datetime )</div>", unsafe_allow_html=True)
-        # pilih2 = st.radio("Tampilkan setelah sudah diubah?", ["Tidak", "Pengecekan"], key="cek_tipe")
-        # if pilih2 == "Pengecekan":
-        #     buffer = io.StringIO()
-        #     df.info(buf=buffer)
-        #     info_str = buffer.getvalue()
-        #     st.text(info_str)
-
-        # st.markdown("---")
-
-        # # 3. Missing Value
-        # st.subheader("✅ Pengecekan Missing Value")
-        # st.markdown("<div style='text-align: justify;'>Tidak ditemukan missing value.</div>", unsafe_allow_html=True)
-        # pilih3 = st.radio("Tampilkan pengecekan?", ["Tidak", "Pengecekan"], key="cek_missing")
-        # if pilih3 == "Pengecekan":
-        #     st.dataframe(df.isna().sum())
-
-        # st.markdown("---")
-
-        # # 4. Outlier
-        # st.subheader("⚠️ Pengecekan Outlier")
-        # st.markdown("<div style='text-align: justify;'>Terdapat Outlier pada kolom “Price” dimana harga pada kolom “Price” masih masuk akal dan banyak sehingga outlier tidak dihapus</div>", unsafe_allow_html=True)
-        # pilih4 = st.radio("Tampilkan pengecekan?", ["Tidak", "Pengecekan"], key="cek_outlier")
-        # if pilih4 == "Pengecekan":
-        #     st.write("🔍 Cek Plot Kolom `age`")
-        #     check_plot(df, 'age')
-
-        #     st.write("🔍 Cek Plot Kolom `quantity`")
-        #     check_plot(df, 'quantity')
-
-        #     st.write("🔍 Cek Plot Kolom `price`")
-        #     check_plot(df, 'price')
-
-        #     st.write("📌 Nilai unik di kolom `price` (diurutkan):")
-        #     uq_price = sorted(df['price'].unique())
-        #     st.write(uq_price)
-
-        #     # Tampilkan transaksi tertentu (bukti outlier logis)
-        #     for target_price in [5250.0, 4200.0, 3150.0, 3000.85]:
-        #         st.write(f"📄 Transaksi dengan harga {target_price}:")
-        #         df_cs_filter = df[df['price'] == target_price]
-        #         st.dataframe(df_cs_filter)
-        
-    # with st.expander("🎯 Tujuan Proyek & Masalah Bisnis"):
-    #     st.markdown("### 🎯 Tujuan Proyek")
-    #     st.markdown("""
-    #     - Mengelompokkan pelanggan berdasarkan **RFM** waktu terakhir pembelian **(Recency)**, frekuensi transaksi (**Frequency)**, dan nilai pembelian **(Monetary)**.  
-    #     - Mengidentifikasi pelanggan bernilai tinggi dan berisiko hilang untuk menyusun strategi yang lebih tepat.  
-    #     - Memberikan insight untuk pengambilan keputusan pemasaran berbasis data.
-    #     """)
-
-    #     st.markdown("### 👥 Pihak yang Diuntungkan")
-    #     st.markdown("""
-    #     - **Tim Marketing**: Menargetkan kampanye promosi ke segmen dengan potensi tertinggi.  
-    #     - **Manajemen Pusat Perbelanjaan**: Menentukan strategi retensi pelanggan dan loyalty program.  
-    #     - **Retailer**: Lebih memahami pelanggan aktif vs. pasif untuk penawaran yang disesuaikan.
-    #     """)
-
-    #     st.markdown("### ❓ Masalah Bisnis")
-    #     st.markdown("""
-    #     **Bagaimana cara mengelompokkan pelanggan berdasarkan perilaku belanja mereka agar strategi pemasaran lebih terarah dan berdampak?**  
-
-    #     Saat ini, semua pelanggan cenderung diperlakukan sama, padahal kontribusinya berbeda-beda. Tanpa pemetaan pelanggan yang jelas, promosi bisa tidak efektif dan menyebabkan biaya tinggi.
-    #     """)
-
-    #     st.markdown("### ✅ Manfaat dari Solusi Ini:")
-    #     st.markdown("""
-    #     - Meningkatkan efisiensi anggaran promosi.  
-    #     - Fokus pada retensi pelanggan bernilai tinggi.  
-    #     - Mengurangi churn dari pelanggan yang berisiko hilang.  
-    #     - Mendukung strategi bisnis yang lebih terfokus dan berbasis data.
-    #     """)
-
-    # with st.expander("🧠 Customer Segmentation - RFM Score"):
-    #     st.markdown("## 📊 Customer Segmentation")
-    #     st.markdown("Perhitungan RFM ( **R**ecency, **F**requency, **M**onetary ) Score")
-    #     row1, row2, row3 = st.columns([2, 1, 2])
-
-    #     with row1:
-    #         st.image("images/rfm1.png", caption="Total Score Formula RFM", use_container_width=True)
-    #     with row2:
-    #         st.image("images/rfm2.png", caption="Distribution RFM Score", use_container_width=True)
-    #     with row3:
-    #         st.image("images/rfm3.png", caption="Customer Segmentation Strategy & Action", use_container_width=True)
-
-    #     st.markdown("---")
-
-    #     st.markdown("## 📐 Pembagian RFM (Recency, Frequency, Monetary)")
-    #     left_col, right_col = st.columns([2, 2])
-
-    #     with left_col:
-    #         st.markdown("""
-    #         - **Q1 (25%)**: Batas bawah — 25% data di bawah nilai ini  
-    #         - **Q2 (50%)**: Median — nilai tengah dari seluruh data  
-    #         - **Q3 (75%)**: Batas atas — 75% data di bawah nilai ini
-    #         """)
-
-    #     with right_col:
-    #         st.image("images/rfm4.png", caption="RFM Quartile", use_container_width=True)
-
-    # with st.expander("📈 Exploratory Data Analysis (EDA)"):
-    # st.subheader("1. Distribusi Target (Delivery Time)")
-    # fig1 = sns.histplot(df_fd['Delivery_Time_min'], kde=True, color='skyblue')
-    # st.pyplot(fig1.figure)
-
-    # st.subheader("2. Korelasi Antar Fitur Numerik")
-    # fig2 = sns.heatmap(df_fd.corr(numeric_only=True), annot=True, cmap='Blues')
-    # st.pyplot(fig2.figure)
-
-    # st.subheader("3. Delivery Time vs Jenis Kendaraan")
-    # fig3 = sns.barplot(data=df_fd, x='Vehicle_Type', y='Delivery_Time_min', estimator=np.mean, palette='Set2')
-    # st.pyplot(fig3.figure)
-
-    # st.subheader("4. Delivery Time vs Kondisi Cuaca")
-    # fig4 = sns.boxplot(data=df_fd, x='Weather', y='Delivery_Time_min', palette='Set2')
-    # st.pyplot(fig4.figure)
-
-    # st.subheader("5. Jarak vs Delivery Time")
-    # fig5, ax5 = plt.subplots()
-    # sns.scatterplot(data=df_fd, x='Distance_km', y='Delivery_Time_min', alpha=0.6, ax=ax5)
-    # sns.regplot(data=df_fd, x='Distance_km', y='Delivery_Time_min', scatter=False, color='red', ax=ax5)
-    # st.pyplot(fig5)
-
-    # with st.expander("📊 Outlier Detection (Visual)"):
-    # numerical_cols = ['Distance_km', 'Preparation_Time_min', 'Courier_Experience_yrs', 'Delivery_Time_min']
-    # var_selected = st.selectbox("Pilih variabel numerik:", numerical_cols)
-
-    # def check_plot(df_fd, variable):
-    #     fig, axs = plt.subplots(1, 3, figsize=(16, 4))
-    #     sns.histplot(df_fd[variable], bins=30, ax=axs[0])
-    #     axs[0].set_title("Histogram")
-
-    #     stats.probplot(df_fd[variable], dist="norm", plot=axs[1])
-    #     axs[1].set_ylabel("Variable quantiles")
-
-    #     sns.boxplot(y=df_fd[variable], ax=axs[2])
-    #     axs[2].set_title("Boxplot")
-    #     st.pyplot(fig)
-
-    # check_plot(df_fd, var_selected)
-    # st.info("💡 Outlier ditampilkan untuk analisis visual, tidak dihapus karena data masih tergolong wajar.")
 
 elif page == 'Predict':
     from model import predict
