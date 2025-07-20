@@ -179,6 +179,7 @@ def insight():
         with row3:
             st.image("images/edabi6.png")
 
+        st.markdown("---")
         st.markdown("""
         ### ✅ Kesimpulan Keseluruhan :
         Berdasarkan analisis terhadap berbagai faktor yang memengaruhi waktu pengiriman:

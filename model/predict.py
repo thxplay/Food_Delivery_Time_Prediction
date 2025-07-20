@@ -22,7 +22,7 @@ def predict():
     prep_time = st.number_input("Waktu Persiapan (menit)", min_value=0, max_value=180, value=15, step=1)
     courier_exp = st.number_input("Pengalaman Kurir (tahun)", min_value=0, max_value=30, value=2, step=1)
 
-    weather = st.selectbox("Kondisi Cuaca", sorted(['Clear', 'Rainy', 'Foggy', 'Windy']))
+    weather = st.selectbox("Kondisi Cuaca", sorted(['Clear', 'Rainy', 'Snowy', 'Foggy', 'Windy']))
     traffic = st.selectbox("Tingkat Kemacetan", sorted(['Low', 'Medium', 'High']))
     time_of_day = st.selectbox("Waktu dalam Sehari", ['Morning', 'Afternoon', 'Evening', 'Night'])
     vehicle = st.selectbox("Jenis Kendaraan", sorted(['Bike', 'Car', 'Scooter']))

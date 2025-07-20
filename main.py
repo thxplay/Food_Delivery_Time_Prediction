@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore", message=".*use_column_width.*")
 # ⚙️ Page Configuration
 st.set_page_config(
     page_title="Food Delivery Time Prediction",
-    page_icon="📊",
+    page_icon="📈",
     layout="wide"
 )
 
@@ -74,7 +74,7 @@ if page == 'Data Understanding':
         """)
 
         df_fd = pd.read_csv('dataset/Food_Delivery_Times.csv')
-        st.markdown("<h2 style='text-align: justify;'>Datasets</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: justify;'>📄 Datasets</h2>", unsafe_allow_html=True)
         st.dataframe(df_fd)
         if 'Unnamed: 0' in df_fd.columns:
             df_fd.drop(columns='Unnamed: 0', inplace=True)
