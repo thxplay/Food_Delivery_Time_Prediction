@@ -20,10 +20,9 @@ def insight():
             st.image("images/fooddelivery6.png")
         with row3:
             st.image("images/fooddelivery7.png")
-            
+
     #EDA with POWERBI
     with st.expander("### 👥 EDA with PowerBI"):
-
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
             st.image("images/edabi1.png")
@@ -49,10 +48,11 @@ def insight():
             """)
         with row3:
             st.image("images/rd1.jpg")
-
+            
+        st.markdown("---")
         row1, row2, row3 = st.columns([1, 2, 2])
         with row1:
-            st.image("images/rd2.jpg")
+            st.image("images/rd2.png")
         with row2:
             st.markdown("""
             Level kurir mana yang paling cepat dalam pengiriman?
@@ -75,6 +75,7 @@ def insight():
         with row3:
             st.image("images/edabi2.png")
 
+        st.markdown("---")
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
             st.image("images/edabi3.png")
@@ -99,6 +100,7 @@ def insight():
         with row3:
             st.image("images/rd3.jpg")
 
+        st.markdown("---")
         row1, row2, row3 = st.columns([1, 2, 2])
         with row1:
             st.image("images/rd4.jpg")
@@ -123,6 +125,7 @@ def insight():
         with row3:
             st.image("images/edabi4.png")
 
+        st.markdown("---")
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
             st.image("images/edabi5.png")
@@ -149,6 +152,7 @@ def insight():
         with row3:
             st.image("images/rd5.jpg")
 
+        st.markdown("---")
         row1, row2, row3 = st.columns([1, 2, 2])
         with row1:
             st.image("images/rd6.jpg")
@@ -222,6 +226,7 @@ def insight():
         with col3:
             st.image("images/rdp1.jpg")
 
+        st.markdown("---")
         # 2. Korelasi Antar Fitur Numerik
         col1, col2, col3 = st.columns([1, 2, 2])
         with col1:
@@ -247,6 +252,7 @@ def insight():
         with col3:
             st.image("images/eda2.png")
 
+        st.markdown("---")
         # 3. Rata-rata Delivery Time per jenis Kendaraan
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
@@ -271,6 +277,7 @@ def insight():
         with col3:
             st.image("images/rdp3.jpg")
 
+        st.markdown("---")
         # 4. Delivery Time per Weather Condition
         col1, col2, col3 = st.columns([1, 2, 2])
         with col1:
@@ -292,6 +299,7 @@ def insight():
         with col3:
             st.image("images/eda4.png")
 
+        st.markdown("---")
         # 5. Hubungan Jarak dan Waktu Pengiriman
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
@@ -313,6 +321,7 @@ def insight():
         with col3:
             st.image("images/rdp5.jpg")
 
+        st.markdown("---")
         # 6
         col1, col2, col3 = st.columns([1, 2, 2])
         with col1:
@@ -334,6 +343,7 @@ def insight():
         with col3:
             st.image('images/eda6.png')
 
+        st.markdown("---")
         # 7
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
@@ -358,6 +368,7 @@ def insight():
         with col3:
             st.image('images/rdp7.jpg')
 
+        st.markdown("---")
         # 8
         col1, col2, col3 = st.columns([1, 2, 2])
         with col1:
@@ -380,6 +391,7 @@ def insight():
         with col3:
             st.image('images/eda8.png')
 
+        st.markdown("---")
         # 9
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
@@ -403,6 +415,7 @@ def insight():
         with col3:
             st.image('images/rdp9.jpg')
 
+        st.markdown("---")
         # 10
         col1, col2, col3 = st.columns([1, 2, 2])
         with col1:
