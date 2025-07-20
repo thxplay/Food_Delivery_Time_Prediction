@@ -25,7 +25,7 @@ def insight():
 
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
-            st.image("images/edabi1.jpg")
+            st.image("images/edabi1.png")
         with row2:
             st.markdown("""
             Apakah jenis kendaraan memengaruhi waktu pengiriman rata-rata?
@@ -72,11 +72,11 @@ def insight():
             - Memonitor kinerja kurir secara berkala dan memberi insentif berbasis performa guna mendorong peningkatan kualitas layanan.
             """)
         with row3:
-            st.image("images/edabi2.jpg")
+            st.image("images/edabi2.png")
 
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
-            st.image("images/edabi3.jpg")
+            st.image("images/edabi3.png")
         with row2:
             st.markdown("""
             Apakah jenis kendaraan yang digunakan dalam kondisi cuaca tertentu memengaruhi efisiensi pengiriman?
@@ -120,11 +120,11 @@ def insight():
             - Optimalkan jadwal shift kurir untuk memperkuat armada malam, tanpa mengganggu beban kerja siang.
             """)
         with row3:
-            st.image("images/edabi4.jpg")
+            st.image("images/edabi4.png")
 
         row1, row2, row3 = st.columns([2, 2, 1])
         with row1:
-            st.image("images/edabi5.jpg")
+            st.image("images/edabi5.png")
         with row2:
             st.markdown("""
             Apakah lalu lintas padat benar-benar memperlambat proses pengiriman?
@@ -172,7 +172,7 @@ def insight():
             - Integrasikan data prakiraan cuaca dengan sistem penjadwalan pengiriman untuk memilih kendaraan paling efisien.
             """)
         with row3:
-            st.image("images/edabi6.jpg")
+            st.image("images/edabi6.png")
 
         st.markdown("""
         ### ✅ Kesimpulan Keseluruhan :
@@ -197,7 +197,7 @@ def insight():
         # 1. Distribusi Delivery Time (Menit)
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
-            st.image("images/eda1.jpg")
+            st.image("images/eda1.png")
         with col2:
             st.markdown("""
             **1. Distribusi Delivery Time (Menit)**  
@@ -244,12 +244,12 @@ def insight():
             - Fitur numerik dengan korelasi rendah bisa tetap digunakan, tapi perlu uji lebih lanjut di modeling.
             """)
         with col3:
-            st.image("images/eda2.jpg")
+            st.image("images/eda2.png")
 
         # 3. Rata-rata Delivery Time per jenis Kendaraan
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
-            st.image("images/eda3.jpg")
+            st.image("images/eda3.png")
         with col2:
             st.markdown("""
             **3. Rata-rata Delivery Time per jenis Kendaraan**  
@@ -289,12 +289,12 @@ def insight():
             Cuaca buruk seperti salju dan hujan menyebabkan pengiriman lebih lama secara signifikan dibanding cuaca cerah.
             """)
         with col3:
-            st.image("images/eda4.jpg")
+            st.image("images/eda4.png")
 
         # 5. Hubungan Jarak dan Waktu Pengiriman
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
-            st.image("images/eda5.jpg")
+            st.image("images/eda5.png")
         with col2:
             st.markdown("""
             **5. Hubungan Jarak dan Waktu Pengiriman**  
@@ -331,12 +331,12 @@ def insight():
         Ada korelasi positif antara jarak dan waktu pengiriman. Namun hubungan tidak sepenuhnya linear, karena faktor lain seperti lalu lintas dan cuaca ikut berperan.
         ''')
         with col3:
-            st.image('images/eda6.jpg')
+            st.image('images/eda6.png')
 
         # 7
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
-            st.image('images/eda7.jpg')
+            st.image('images/eda7.png')
         with col2:
             st.markdown('''
         **7. Hubungan Jarak dan Waktu Pengiriman**  
@@ -377,12 +377,12 @@ def insight():
         Waktu persiapan memang berdampak pada waktu pengiriman, tapi bukan satu-satunya penyebab keterlambatan. Perlu dipadukan dengan variabel lain (seperti jarak & lalu lintas) dalam model prediktif.
         ''')
         with col3:
-            st.image('images/eda8.jpg')
+            st.image('images/eda8.png')
 
         # 9
         col1, col2, col3 = st.columns([2, 2, 1])
         with col1:
-            st.image('images/eda9.jpg')
+            st.image('images/eda9.png')
         with col2:
             st.markdown('''
         **9. Pengalaman Kurir per Jenis Kendaraan**  
@@ -423,4 +423,4 @@ def insight():
         Waktu pengiriman lebih konsisten di siang dan malam. Pengiriman pagi dan sore rentan keterlambatan.
         ''')
         with col3:
-            st.image('images/eda10.jpg')
+            st.image('images/eda10.png')
