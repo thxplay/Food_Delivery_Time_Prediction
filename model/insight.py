@@ -3,7 +3,7 @@ import streamlit as st
 def insight():
     st.header('📈 Dashboard Visualisasi PowerBI & Insightnya')
 
-    with st.expander("### Dashboard Visualisasi with PowerBI"):
+    with st.expander("### 📊 Dashboard Visualisasi with PowerBI"):
         st.markdown('<div style="text-align: justify;">Dashboard Visualisasi hanya memiliki 1 halaman dan memiliki 7 kategori termasuk home</div>', unsafe_allow_html=True)
         st.image("images/fooddelivery1.png")
         row1, row2, row3 = st.columns([1, 1, 1])
